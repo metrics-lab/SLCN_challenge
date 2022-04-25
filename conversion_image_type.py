@@ -13,10 +13,11 @@ import nibabel as nb
 
 
 #### Load gifti image using nibabel ####
-image = nb.load('/data/Data/data_release_gDL_benchmarking/Data/Regression/Native_Space/regression_native_space_features/sub-CC00051XX02_ses-7702_L.shape.gii')
+filename = '' ### Participant to modify
+image = nb.load(filename)
 
 #### Define number of channels in gifti ####
-channels=4
+channels=4 ### Each channel represents a structural cortical metric (myelin, curvature, cortical thickness and sulcal depth - in that order) 
 
 img_array=[]
 
@@ -27,18 +28,20 @@ for i in range(channels):
     img_array.append(array)
 
 
-#### Swap axes so that img_array dim is 40962,4 #### 
-img_array = np.swapaxes(img_array, 0,1)
+#### Swap axes so that img_array dim is 40962,4 - this will depend on how participants want to work with the image arrays #### 
+img_array = np.swapaxes(img_array, 0,1) 
 
 
 #### Create .mha image using sitk ####
 mha_img = sitk.GetImageFromArray(img_array)
 
+new_filename='' ### Participant to modify
+
 #### Write out .mha image ####
-sitk.WriteImage(mha_img,'/home/sd20/workspace/SLCN_algorithm/test/sub-CC01215XX111_ses-14633_L.mha')
+sitk.WriteImage(mha_img, new_filename)
 
 #### Read in .mha image again ####
-mha_img1 = sitk.ReadImage('/home/sd20/workspace/SLCN_algorithm/test/sub-CC01215XX111_ses-14633_L.mha')
+mha_img1 = sitk.ReadImage(new_filename)
 
 
 #### Get array from image using sitk ####
