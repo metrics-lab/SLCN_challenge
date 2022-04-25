@@ -13,8 +13,7 @@ import nibabel as nb
 
 
 #### Load gifti image using nibabel ####
-#image = nb.load('/data/Data/data_release_gDL_benchmarking/Data/Regression/Native_Space/regression_native_space_features/sub-CC00051XX02_ses-7702_L.shape.gii')
-image = nb.load('/home/sd20/data/dHCP/merged_metrics/ico6_template/original/CC01215XX11_146331_right_merged.shape.gii')
+image = nb.load('/data/Data/data_release_gDL_benchmarking/Data/Regression/Native_Space/regression_native_space_features/sub-CC00051XX02_ses-7702_L.shape.gii')
 
 #### Define number of channels in gifti ####
 channels=4
@@ -29,7 +28,7 @@ for i in range(channels):
 
 
 #### Swap axes so that img_array dim is 40962,4 #### 
-#img_array = np.swapaxes(img_array, 0,1)
+img_array = np.swapaxes(img_array, 0,1)
 
 
 #### Create .mha image using sitk ####
