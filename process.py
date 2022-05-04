@@ -23,7 +23,7 @@ from pathlib import Path
 import json
 from glob import glob
 
-execute_in_docker = False
+execute_in_docker = True
 
 class Slcn_algorithm(ClassificationAlgorithm):
     def __init__(self):
