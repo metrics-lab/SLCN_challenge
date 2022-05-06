@@ -15,9 +15,14 @@ More information about algorithm container and submission can be found [here](ht
 2. [Overview of the project structure](#overview)
 3. [Requirements for Grand Challenge submission (input/output)](#requirements)
 4. [Build, test and export your algorithm container](#container)
-4. [Tips and general advice](#advice)
-5. [Contacts](#contact)
-6. [Acknowledgements](#acknowledgments)
+5. [Tips and general advice](#advice)
+6. [Grand Challenge Submissions](#submission)
+
+    6.1. [Algorithm Container](#algo)
+
+    6.2. [Evaluation Container](#eval)
+7. [Contacts](#contact)
+8. [Acknowledgements](#acknowledgments)
 
 
 ## 1. Prerequisites <a name="prerequisites"></a>
@@ -95,7 +100,7 @@ Finally, once your algorithm container is working, you can export it as a .tar f
 bash export.sh
 ```
 
-## 4. Tips and general advice <a name="advice"></a>
+## 5. Tips and general advice <a name="advice"></a>
 
 To remove all unused docker images you can use
 
@@ -103,11 +108,26 @@ To remove all unused docker images you can use
 docker image prune -y 
 ```
 
-## 4. Contacts <a name="contacts"></a>
+## 6. Grand Challenge Submissions <a name="container"></a>
+
+Submission for the challenge have to uploaded on [SLCN Challenge Website](https://slcn.grand-challenge.org/).
+
+The submissions on grand-challenge work throught the use of Docker containers. As a participant, you will have to create and upload an *Algorithm Container* in order to submit a solution. 
+
+### 6.1 Algorithm Container <a name="algo"></a>
+
+![algo_title](https://raw.githubusercontent.com/{metrics-lab}/{SLCN_challenge}/{main}/.github/images/{challenge1}.{png}
+)
+
+
+
+### 6.2 Evaluation Container <a name="eval"></a>
+
+## 7. Contacts <a name="contacts"></a>
 
 Please email slcn.challenge@gmail.com if you have any questions on slcn submissions, or open an issue. 
 
-## 5. Acknowledgements <a name="acknowledgements"></a>
+## 8. Acknowledgements <a name="acknowledgements"></a>
 
 The repository is greatly inspired from [MIDOG_reference_docker](https://github.com/DeepPathology/MIDOG_reference_docker).
 
