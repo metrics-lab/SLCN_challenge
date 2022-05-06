@@ -114,14 +114,31 @@ Submission for the challenge have to uploaded on [SLCN Challenge Website](https:
 
 The submissions on grand-challenge work throught the use of Docker containers. As a participant, you will have to create and upload an *Algorithm Container* in order to submit a solution. 
 
-### 6.1 Algorithm Container <a name="algo"></a>
+### 6.1 Create your Algorithm page on Grand Challenge <a name="algo"></a>
 
-![algo_title](https://raw.githubusercontent.com/{metrics-lab}/{SLCN_challenge}/{main}/.github/images/{challenge1}.{png}
-)
+Fill the required information. You can keep your algorithm private. 
+
+![create_algo](https://raw.githubusercontent.com/metrics-lab/SLCN_challenge/main/.github/images/challenge1.png)
 
 
+Please set the viewer option to Viewer CIRRUS Core (Public); the inputs to *Cortical surface mesh (Image)* and the outputs to *Birth Age (Float)*
 
-### 6.2 Evaluation Container <a name="eval"></a>
+
+![info_algo](https://raw.githubusercontent.com/metrics-lab/SLCN_challenge/main/.github/images/challenge2.png)
+
+### 6.2 Upload your Algorithm container on Grand Challenge <a name="algo"></a>
+
+Once your algorithm page is created, you will be able to either upload your algorithm container (the .tar output file of the *bash export.sh* command) or link it to a github repository containing your project. 
+
+![info_algo](https://raw.githubusercontent.com/metrics-lab/SLCN_challenge/main/.github/images/challenge3.png)
+
+
+### 6.3 Try-out your algorithm container <a name="algo"></a>
+
+Even if your container is working perfectly localy, it might failed when uploaded onto the grand-challenge servers. Therefore, we highly advice you to **try-out** your algorithm container, by uploading one image example (a .mha file such as the one provided in ./test/).
+
+![info_algo](https://raw.githubusercontent.com/metrics-lab/SLCN_challenge/main/.github/images/challenge4.png)
+
 
 ## 7. Contacts <a name="contacts"></a>
 
