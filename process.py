@@ -38,6 +38,10 @@ class Slcn_algorithm(ClassificationAlgorithm):
             output_file= Path("/output/birth-age.json") if execute_in_docker else Path("./output/birth-age.json")
         )
         
+        ###                                                                                                     ###
+        ###  TODO: adapt the following part for YOUR submission: should create your model and load the weights
+        ###                                                                                                     ###
+
         # use GPU if available otherwise CPU
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         print("===> Using ", self.device)
@@ -79,7 +83,6 @@ class Slcn_algorithm(ClassificationAlgorithm):
             json.dump(self._case_results[0], f)
 
     def process_case(self, *, idx, case):
-
         # Load and test the image for this case
         input_image, _ = self._load_input_image(case=case)
         # Detect and score candidates
@@ -107,7 +110,9 @@ class Slcn_algorithm(ClassificationAlgorithm):
         # Extract a numpy array with image data from the SimpleITK Image
         image_data = SimpleITK.GetArrayFromImage(input_image)
 
-        ###  TODO: adapt this part for submission
+        ###                                                                     ###
+        ###  TODO: adapt the following part for YOUR submission: make prediction
+        ###                                                                     ###
 
         ## input image of shape (N vertices, C channels)
         if image_data.shape[0]==4:
